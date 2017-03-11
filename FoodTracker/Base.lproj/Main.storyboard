@@ -23,11 +23,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="96.5" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vbF-lo-0ge">
-                                <rect key="frame" x="16" y="40" width="320" height="424.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="96.5" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vbF-lo-0ge">
+                                <rect key="frame" x="27" y="28" width="320" height="434.5"/>
                                 <subviews>
-                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIL-vh-tsV">
-                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="20.5"/>
+                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIL-vh-tsV">
+                                        <rect key="frame" x="117" y="0.0" width="86.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -38,15 +38,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYB-SG-r1U">
-                                        <rect key="frame" x="0.0" y="66.5" width="151" height="30"/>
-                                        <state key="normal" title="Set Default Label Text"/>
-                                        <connections>
-                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FCj-bN-A3n"/>
-                                        </connections>
-                                    </button>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" translatesAutoresizingMaskIntoConstraints="NO" id="9d3-WB-v6R">
-                                        <rect key="frame" x="0.0" y="104.5" width="320" height="320"/>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="capresePasta" translatesAutoresizingMaskIntoConstraints="NO" id="9d3-WB-v6R">
+                                        <rect key="frame" x="0.0" y="66.5" width="320" height="320"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="9d3-WB-v6R" secondAttribute="height" multiplier="1:1" id="a2H-1k-lYv"/>
@@ -55,24 +48,35 @@
                                             <outletCollection property="gestureRecognizers" destination="A8x-U3-1RN" appends="YES" id="eje-Ny-0z6"/>
                                         </connections>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jyT-rB-CMs" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="394.5" width="240" height="40"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="startCount">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="startSize">
+                                                <size key="value" width="40" height="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Jyn-6a-JeD" secondAttribute="trailing" id="AZS-xO-dvN"/>
+                                    <constraint firstItem="Jyn-6a-JeD" firstAttribute="width" secondItem="vbF-lo-0ge" secondAttribute="width" id="zvo-Al-NuK"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="Jyn-6a-JeD" secondAttribute="leading" id="2iW-Xg-nDj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Jyn-6a-JeD" secondAttribute="trailing" constant="23" id="5gv-cn-pyO"/>
-                            <constraint firstItem="vbF-lo-0ge" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="a14-PL-5fS"/>
-                            <constraint firstItem="vbF-lo-0ge" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="dm0-WX-yoe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vbF-lo-0ge" secondAttribute="trailing" constant="12" id="1yW-4J-TMO"/>
+                            <constraint firstItem="vbF-lo-0ge" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="gWe-Wh-cUB"/>
+                            <constraint firstItem="vbF-lo-0ge" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="ohE-uy-Ifu"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mealNameLabel" destination="QIL-vh-tsV" id="br4-jd-qwv"/>
                         <outlet property="nameTextField" destination="Jyn-6a-JeD" id="U21-mD-tWX"/>
                         <outlet property="photoImageView" destination="9d3-WB-v6R" id="Zzz-bK-IJr"/>
+                        <outlet property="ratingControl" destination="jyT-rB-CMs" id="AAw-fQ-djt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -85,4 +89,7 @@
             <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="capresePasta" width="480" height="320"/>
+    </resources>
 </document>
