@@ -23,7 +23,7 @@ import UIKit
       setupButtons()
     }
   }
-  @IBInspectable var startCount: Int = 5 {
+  @IBInspectable var startCount: Int = 4 {
     didSet {
       setupButtons()
     }
